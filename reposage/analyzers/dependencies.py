@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import json
 import re
 from pathlib import PurePosixPath
@@ -60,6 +61,11 @@ def _scalar(value):
         return value[1:-1]
     if value in ("true", "false"):
         return value == "true"
+    if value.startswith("[") and value.endswith("]"):
+        try:
+            return ast.literal_eval(value)
+        except (ValueError, SyntaxError):
+            return value
     try:
         return int(value)
     except ValueError:
