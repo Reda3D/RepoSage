@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reposage"
+version = "1.0.0"
+description = "Generate a compressed, AI-ready context pack for any codebase: architecture, endpoints, dependencies, TODOs, security notes and conventions."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = ["ai", "llm", "codebase", "documentation", "context", "cli", "security", "developer-tools"]
+authors = [{ name = "RepoSage contributors" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/Reda3D/reposage"
+Documentation = "https://github.com/Reda3D/reposage#readme"
+Issues = "https://github.com/Reda3D/reposage/issues"
+
+[project.scripts]
+reposage = "reposage.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["reposage*"]
