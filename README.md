@@ -1,4 +1,6 @@
-# RepoSage
+<p align="center">
+  <img src="assets/banner.svg" alt="RepoSage — one file that explains a whole codebase" width="900">
+</p>
 
 **Generate a compressed, AI-ready "context pack" for any codebase** — architecture, HTTP endpoints, dependencies, TODOs, security notes and conventions — in Markdown, JSON, or a paste-ready AI prompt. Incremental updates. Zero dependencies.
 
